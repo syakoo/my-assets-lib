@@ -34,7 +34,7 @@ export const MyDynamicLink: React.FC<MyDynamicLink> = ({
       <a
         style={{ cursor: 'pointer' }}
         {...otherProps}
-        onClick={() => router.push(href, as)}
+        onClick={() => router.push(href, B(as))}
       >
         {children}
       </a>
