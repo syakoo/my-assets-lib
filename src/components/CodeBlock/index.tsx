@@ -53,6 +53,12 @@ const CopyButton = styled.div`
   right: 0px;
   margin: 0.5em;
   cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0;
+  }
 `
 
 const HiddenTextArea = styled.textarea`
