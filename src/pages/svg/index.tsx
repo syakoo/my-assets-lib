@@ -39,7 +39,7 @@ const SvgList: NextPage = () => {
       </CenteringTemp>
       <SVGList>
         {data.map((item, i) => (
-          <LinkedCard path={`/svg/${item.name}`} key={i}>
+          <LinkedCard href="/svg/[name]" as={`/svg/${item.name}`} key={i}>
             {item.data}
             <Title title={item.name} />
           </LinkedCard>
@@ -56,12 +56,9 @@ const SVGList = styled.div`
   flex-wrap: wrap;
   align-items: start;
   margin: 1em;
-  > a {
+  svg {
     width: 100px;
-    svg {
-      width: 100%;
-      height: 100%;
-    }
+    height: 100px;
   }
 `
 

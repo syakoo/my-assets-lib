@@ -4,7 +4,7 @@ import Link from 'next/link'
 import B from '../../logics/withBase'
 // ____________________________________________________________________________
 //
-type MyLink = {
+export type MyLink = {
   href: string
   as?: string
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>
