@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 import { Layout } from '../../components/Templates'
+import B from '../../components/MyLink/withBase'
 
 import dict from '../../assets/components.manifest'
 // ____________________________________________________________________________
@@ -12,7 +13,7 @@ const Comps: NextPage = () => {
   const item = dict[0]
 
   useEffect(() => {
-    router.replace(`/components/${item.fileName}`)
+    router.replace(B(`/components/${item.fileName}`))
   }, [router, item])
 
   return (

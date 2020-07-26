@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import B from '../../logics/withBase'
+import B from './withBase'
 // ____________________________________________________________________________
 //
 export type MyLink = {
@@ -17,15 +17,8 @@ export const MyLink: React.FC<MyLink> = ({
   ...otherProps
 }) => (
   <>
-    {as && (
-      <Link href={href} as={B(as)}>
-        <a {...otherProps}>{children}</a>
-      </Link>
-    )}
-    {!as && (
-      <Link href={B(href)}>
-        <a {...otherProps}>{children}</a>
-      </Link>
-    )}
+    <Link href={B(href)} as={as && B(as)}>
+      <a {...otherProps}>{children}</a>
+    </Link>
   </>
 )
