@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import B from '../components/MyLink/withBase'
 // ____________________________________________________________________________
 //
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
@@ -8,7 +9,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     <>
       <Head>
         <title>My Assets Lib</title>
-        <link rel="shortcut icon" href="my-assets-lib.png" />
+        <link rel="shortcut icon" href={B('my-assets-lib.png')} />
         <meta property="description" content="SyakooのAssetsの図書館" />
         <meta property="og:title" content="My Assets Lib" />
         <meta
