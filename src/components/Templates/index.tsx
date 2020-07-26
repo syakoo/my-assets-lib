@@ -29,12 +29,9 @@ export const Layout: React.FC = ({ children }) => (
     {children}
   </ThemeProvider>
 )
-export const CenteringTemp: React.FC = ({ children }) => (
-  <CenteringDiv>{children}</CenteringDiv>
-)
 // ____________________________________________________________________________
 //
-const CenteringDiv = styled.div`
+export const CenteringTemp = styled.div`
   width: 600px;
   margin: auto;
 `

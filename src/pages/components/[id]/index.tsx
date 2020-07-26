@@ -64,9 +64,9 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
               </div>
             ))}
           </ExampleList>
-          <CenteringTemp>
+          <Source>
             <CodeBlock value={dataStr} language="tsx" />
-          </CenteringTemp>
+          </Source>
         </MainDiv>
       </Grids>
     </Layout>
@@ -158,6 +158,12 @@ const ExampleList = styled.div`
 const ExampleCode = styled.div`
   border-top: 2px solid ${(p) => p.theme.gray};
   overflow: hidden;
+`
+
+const Source = styled(CenteringTemp)`
+  pre {
+    padding: 0.5em !important;
+  }
 `
 
 export default Comps
