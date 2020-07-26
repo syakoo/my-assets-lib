@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { MyLink } from '../MyLink'
+import { MyLink, MyDynamicLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 export const Card: React.FC = ({ children }) => {
@@ -12,6 +12,17 @@ export const LinkedCard: React.FC<MyLink> = ({ children, ...otherProps }) => {
   return (
     <StyledLinkedCard>
       <MyLink {...otherProps}>{children}</MyLink>
+    </StyledLinkedCard>
+  )
+}
+
+export const DynamicLinkedCard: React.FC<MyDynamicLink> = ({
+  children,
+  ...otherProps
+}) => {
+  return (
+    <StyledLinkedCard>
+      <MyDynamicLink {...otherProps}>{children}</MyDynamicLink>
     </StyledLinkedCard>
   )
 }

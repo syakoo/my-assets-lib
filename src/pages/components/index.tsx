@@ -11,7 +11,7 @@ const Comps: NextPage = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace(B(`/components/0`))
+    router.replace(B(`/components/0`), '/components/[id]')
   }, [router])
 
   return <Layout></Layout>

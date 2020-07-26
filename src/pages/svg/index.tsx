@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Layout } from '../../components/Templates'
 import { InputText } from '../../components/CustomInputs'
-import { LinkedCard, Title } from '../../components/Card'
+import { DynamicLinkedCard, Title } from '../../components/Card'
 import { Breadcrumbs, Item } from '../../components/Breadcrumbs'
 import { CenteringTemp } from '../../components/Templates'
 
@@ -39,10 +39,14 @@ const SvgList: NextPage = () => {
       </CenteringTemp>
       <SVGList>
         {data.map((item, i) => (
-          <LinkedCard href={`/svg/${item.name}`} key={i}>
+          <DynamicLinkedCard
+            href="/svg/[name]"
+            as={`/svg/${item.name}`}
+            key={i}
+          >
             {item.data}
             <Title title={item.name} />
-          </LinkedCard>
+          </DynamicLinkedCard>
         ))}
       </SVGList>
     </Layout>
