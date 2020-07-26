@@ -28,7 +28,7 @@ export const CodeBlock: React.FC<CodeBlock> = ({ value, language }) => (
       >
         Copy
       </CopyButton>
-      <HiddenTextArea id="code" value={value} />
+      <HiddenTextArea id="code" value={value} readOnly />
     </StyledCode>
   </div>
 )
