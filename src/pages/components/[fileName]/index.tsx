@@ -1,6 +1,5 @@
 import fs from 'fs'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
-import Link from 'next/link'
 import { useMemo } from 'react'
 import styled from 'styled-components'
 import jsx2str from 'react-element-to-jsx-string'
@@ -9,6 +8,7 @@ import { Layout } from '../../../components/Templates'
 import { Breadcrumbs, Item } from '../../../components/Breadcrumbs'
 import { CenteringTemp } from '../../../components/Templates'
 import { CodeBlock } from '../../../components/CodeBlock'
+import { MyLink } from '../../../components/MyLink'
 
 import dict from '../../../assets/components.manifest'
 // ____________________________________________________________________________
@@ -37,14 +37,15 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
           </div>
           <Selection>
             {dict.map((it, i) => (
-              <Link href={`/components/${it.fileName}`} key={i}>
-                <a
-                  className={it.name === name ? 'selected' : ''}
-                  title={it.name}
-                >
-                  {it.name}
-                </a>
-              </Link>
+              <MyLink
+                key={i}
+                href="/components/[name]"
+                as={`/components/${it.fileName}`}
+                className={it.name === name ? 'selected' : ''}
+                title={it.name}
+              >
+                {it.name}
+              </MyLink>
             ))}
           </Selection>
         </Sidebar>

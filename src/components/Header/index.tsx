@@ -1,8 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import styled from 'styled-components'
 
+import { MyLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 type PageLink = {
@@ -16,32 +16,23 @@ export const Header: React.FC = () => {
   return (
     <StyledNav>
       <StyledLogo>
-        <Link href="/">
-          <a>My Assets Lib</a>
-        </Link>
+        <MyLink href="/">My Assets Lib</MyLink>
       </StyledLogo>
       <PageLinks>
-        <PageLink className={pathname === '/svg' ? 'current' : ''} path="/svg">
+        <MyLink className={pathname === '/svg' ? 'current' : ''} href="/svg">
           SVG
-        </PageLink>
-        <PageLink
+        </MyLink>
+        <MyLink
           className={pathname === '/components' ? 'current' : ''}
-          path="/components"
+          href="/components"
         >
           Components
-        </PageLink>
+        </MyLink>
       </PageLinks>
     </StyledNav>
   )
 }
 
-const PageLink: React.FC<PageLink> = ({ path, className, children }) => {
-  return (
-    <Link href={path}>
-      <a className={className || ''}>{children}</a>
-    </Link>
-  )
-}
 // ____________________________________________________________________________
 //
 const StyledNav = styled.nav`

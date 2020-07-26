@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 
+import { MyLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 export const Card: React.FC = ({ children }) => {
@@ -9,11 +9,7 @@ export const Card: React.FC = ({ children }) => {
 }
 
 export const LinkedCard: React.FC<{ path: string }> = ({ children, path }) => {
-  return (
-    <Link href={path}>
-      <StyledLinkedCard>{children}</StyledLinkedCard>
-    </Link>
-  )
+  return <StyledLinkedCard href={path}>{children}</StyledLinkedCard>
 }
 
 export const Title: React.FC<{ title: string }> = ({ title }) => {
@@ -27,7 +23,7 @@ const StyledCard = styled.div`
   text-align: center;
 `
 
-const StyledLinkedCard = styled.a`
+const StyledLinkedCard = styled(MyLink)`
   margin: 1em;
   padding: 0.5em;
   text-align: center;

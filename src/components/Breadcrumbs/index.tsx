@@ -1,7 +1,7 @@
 import React, { ReactElement, Fragment } from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 
+import { MyLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 type Breadcrumbs = {
@@ -37,11 +37,7 @@ export const Item: React.FC<Item> = ({ to, disabled, isCurrent, children }) => {
   if (isCurrent) {
     return <span>{children}</span>
   }
-  return (
-    <Link href={to}>
-      <a>{children}</a>
-    </Link>
-  )
+  return <MyLink href={to}>{children}</MyLink>
 }
 // ____________________________________________________________________________
 //

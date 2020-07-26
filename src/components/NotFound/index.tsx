@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 
+import { MyLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 export const NotFound: React.FC = () => {
@@ -9,9 +9,7 @@ export const NotFound: React.FC = () => {
     <div>
       <Title>404 Not Found</Title>
       <div style={{ textAlign: 'center' }}>
-        <Link href="/">
-          <a>ホームへ戻る</a>
-        </Link>
+        <MyLink href="/">ホームへ戻る</MyLink>
       </div>
     </div>
   )
