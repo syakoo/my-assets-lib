@@ -12,7 +12,7 @@ type CodeBlock = {
 // ____________________________________________________________________________
 //
 export const CodeBlock: React.FC<CodeBlock> = ({ value, language }) => (
-  <div>
+  <>
     <StyledCode>
       <Prism language={language} style={coy}>
         {value}
@@ -30,7 +30,7 @@ export const CodeBlock: React.FC<CodeBlock> = ({ value, language }) => (
       </CopyButton>
       <HiddenTextArea id="code" value={value} readOnly />
     </StyledCode>
-  </div>
+  </>
 )
 
 // ____________________________________________________________________________

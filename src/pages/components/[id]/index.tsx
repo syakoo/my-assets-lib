@@ -58,7 +58,9 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
             {exampleCodes.map((exCode, i) => (
               <div key={i}>
                 {item.examples[i]}
-                <CodeBlock value={exCode} language="tsx" />
+                <ExampleCode>
+                  <CodeBlock value={exCode} language="tsx" />
+                </ExampleCode>
               </div>
             ))}
           </ExampleList>
@@ -149,11 +151,13 @@ const ExampleList = styled.div`
       font-size: 0.8em !important;
       max-width: 500px;
       overflow: auto;
-      padding: 1rem !important;
-      padding-bottom: 0px !important;
-      border-top: 2px solid ${(p) => p.theme.gray};
     }
   }
+`
+
+const ExampleCode = styled.div`
+  border-top: 2px solid ${(p) => p.theme.gray};
+  overflow: hidden;
 `
 
 export default Comps
