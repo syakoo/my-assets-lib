@@ -19,12 +19,16 @@ export const Header: React.FC = () => {
         <MyLink href="/">My Assets Lib</MyLink>
       </StyledLogo>
       <PageLinks>
-        <MyLink className={pathname === '/svg' ? 'current' : ''} href="/svg">
+        <MyLink
+          className={pathname.startsWith('/svg') ? 'current' : ''}
+          href="/svg"
+        >
           SVG
         </MyLink>
         <MyLink
-          className={pathname === '/components' ? 'current' : ''}
-          href="/components"
+          className={pathname.startsWith('/components') ? 'current' : ''}
+          href="/components/[id]"
+          as="/components/0"
         >
           Components
         </MyLink>
