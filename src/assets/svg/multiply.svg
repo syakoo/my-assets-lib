@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(50, -20)rotate(45)">
+    <rect x="10" y="40" width="80" height="20" rx="3" />
+    <rect x="40" y="10" width="20" height="80" rx="3" />
+  </g>
+</svg>
