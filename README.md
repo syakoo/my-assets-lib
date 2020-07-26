@@ -1,7 +1,7 @@
 # My Assets Lib
-[![my-assets-lib](https://github.com/syakoo/my-assets-lib/blob/master/public/my-assets-lib.png)](https://syakoo.github.io/my-assets-lib)
+[![my-assets-lib](https://github.com/syakoo/my-assets-lib/blob/master/public/my-assets-lib.png)](https://my-assets-lib.vercel.app/)
 
-Link: https://syakoo.github.io/my-assets-lib/
+Link: https://my-assets-lib.vercel.app/
 
 # なにこれ
 
