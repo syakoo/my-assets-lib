@@ -71,7 +71,7 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = dict.map((item) => `/components/${item.fileName}`)
+  const paths = dict.map((_, i) => `/components/${i}`)
   return {
     paths,
     fallback: false,
@@ -81,10 +81,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<CompDetail> = async ({
   params,
 }) => {
-  const fileName = params.fileName as string
-  const item = dict.find((it) => it.fileName === fileName)
+  const id = params.id as string
+  const item = dict[+id]
   const dataStr = fs
-    .readFileSync(`src/assets/comps/${fileName}/index.tsx`)
+    .readFileSync(`src/assets/comps/${item.fileName}/index.tsx`)
     .toString()
   const exampleCodes = item.examples.map((ex) => jsx2str(ex))
 
