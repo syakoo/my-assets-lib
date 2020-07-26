@@ -1,6 +1,7 @@
 # My Assets Lib
+[![my-assets-lib](https://github.com/syakoo/my-assets-lib/blob/master/public/my-assets-lib.png)](https://syakoo.github.io/my-assets-lib)
 
-![my-assets-lib](https://github.com/syakoo/my-assets-lib/blob/master/public/my-assets-lib.png)
+Link: https://syakoo.github.io/my-assets-lib/
 
 # なにこれ
 
@@ -10,5 +11,4 @@
 OSSなので、追加のAssetsやバグの報告、プルリクエストは歓迎しています。
 
 
-使う際は、[このリポジトリ](https://github.com/syakoo/my-assets-lib)
-にスターをください。喜びます。
+使う際は、このリポジトリにスターをください。喜びます。
