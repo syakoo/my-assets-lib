@@ -27,8 +27,8 @@ export const Header: React.FC = () => {
         </MyLink>
         <MyLink
           className={pathname.startsWith('/components') ? 'current' : ''}
-          href="/components/0"
-          prefetch={false}
+          href="/components/[id]"
+          as="/components/0"
         >
           Components
         </MyLink>

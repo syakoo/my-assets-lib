@@ -39,7 +39,7 @@ const SvgList: NextPage = () => {
       </CenteringTemp>
       <SVGList>
         {data.map((item, i) => (
-          <LinkedCard key={i} href={`/svg/${item.name}`} prefetch={false}>
+          <LinkedCard key={i} href="/svg/[name]" as={`/svg/${item.name}`}>
             {item.data}
             <Title title={item.name} />
           </LinkedCard>

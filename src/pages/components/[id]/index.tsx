@@ -40,10 +40,10 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
             {dict.map((it, i) => (
               <MyLink
                 key={i}
-                href={`/components/${i}`}
+                href="/components/[id]"
+                as={`/components/${i}`}
                 className={it.name === name ? 'selected' : ''}
                 title={it.name}
-                prefetch={false}
               >
                 {it.name}
               </MyLink>

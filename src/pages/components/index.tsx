@@ -1,17 +1,15 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 
 import { Layout } from '../../components/Templates'
-import B from '../../components/MyLink/withBase'
+import { useEffect } from 'react'
 
 // ____________________________________________________________________________
 //
 const Comps: NextPage = () => {
   const router = useRouter()
-
   useEffect(() => {
-    router.replace(B(`/components/0`))
+    router.replace('/components/[id]', '/components/0')
   }, [router])
 
   return <Layout></Layout>
