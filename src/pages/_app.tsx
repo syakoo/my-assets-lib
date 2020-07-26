@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
         <meta property="og:title" content="My Assets Lib" />
         <meta
           property="og:image"
-          content="https://syakoo.github.io/my-assets-lib/my-assets-lib.png"
+          content="https://my-assets-lib.vercel.app/my-assets-lib.png"
         />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="@sako_data" />
