@@ -30,7 +30,7 @@ const SvgDetail: NextPage<SvgDetail> = ({ svgName, dataStr }) => {
           <>
             <CenteringTemp>
               <Breadcrumbs>
-                <Item to="">ホーム</Item>
+                <Item to="/">ホーム</Item>
                 <Item to="/svg">SVG</Item>
                 <Item to={`/svg/${item.name}`}>{item.name}</Item>
               </Breadcrumbs>
