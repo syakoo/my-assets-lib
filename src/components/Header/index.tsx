@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
-import { MyLink, MyDynamicLink } from '../MyLink'
+import { MyLink } from '../MyLink'
 // ____________________________________________________________________________
 //
 type PageLink = {
@@ -25,13 +25,13 @@ export const Header: React.FC = () => {
         >
           SVG
         </MyLink>
-        <MyDynamicLink
+        <MyLink
           className={pathname.startsWith('/components') ? 'current' : ''}
-          href="/components/[id]"
-          as="/components/0"
+          href="/components/0"
+          prefetch={false}
         >
           Components
-        </MyDynamicLink>
+        </MyLink>
       </PageLinks>
     </StyledNav>
   )

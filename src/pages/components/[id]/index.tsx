@@ -8,7 +8,7 @@ import { Layout } from '../../../components/Templates'
 import { Breadcrumbs, Item } from '../../../components/Breadcrumbs'
 import { CenteringTemp } from '../../../components/Templates'
 import { CodeBlock } from '../../../components/CodeBlock'
-import { MyDynamicLink } from '../../../components/MyLink'
+import { MyLink } from '../../../components/MyLink'
 import { Title } from '../../../components/PageTitle'
 
 import dict from '../../../assets/components.manifest'
@@ -38,15 +38,15 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
           </div>
           <Selection>
             {dict.map((it, i) => (
-              <MyDynamicLink
+              <MyLink
                 key={i}
-                href="/components/[id]"
-                as={`/components/${i}`}
+                href={`/components/${i}`}
                 className={it.name === name ? 'selected' : ''}
                 title={it.name}
+                prefetch={false}
               >
                 {it.name}
-              </MyDynamicLink>
+              </MyLink>
             ))}
           </Selection>
         </Sidebar>
