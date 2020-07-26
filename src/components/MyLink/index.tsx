@@ -17,8 +17,15 @@ export const MyLink: React.FC<MyLink> = ({
   ...otherProps
 }) => (
   <>
-    <Link href={B(href)} as={as && B(as)}>
-      <a {...otherProps}>{children}</a>
-    </Link>
+    {as && (
+      <Link href={href} as={B(as)}>
+        <a {...otherProps}>{children}</a>
+      </Link>
+    )}
+    {!as && (
+      <Link href={href} as={B(href)}>
+        <a {...otherProps}>{children}</a>
+      </Link>
+    )}
   </>
 )
