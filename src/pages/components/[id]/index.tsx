@@ -9,6 +9,7 @@ import { Breadcrumbs, Item } from '../../../components/Breadcrumbs'
 import { CenteringTemp } from '../../../components/Templates'
 import { CodeBlock } from '../../../components/CodeBlock'
 import { MyLink } from '../../../components/MyLink'
+import { Title } from '../../../components/PageTitle'
 
 import dict from '../../../assets/components.manifest'
 // ____________________________________________________________________________
@@ -29,7 +30,7 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
     <Layout>
       <Grids>
         <Sidebar>
-          <div style={{ margin: '0px 1em' }}>
+          <div style={{ margin: '0px 0.5em' }}>
             <Breadcrumbs>
               <Item to="/">ホーム</Item>
               <Item to="/components">Components</Item>
@@ -50,9 +51,9 @@ const Comps: NextPage<CompDetail> = ({ name, exampleCodes, dataStr }) => {
           </Selection>
         </Sidebar>
         <MainDiv>
-          <CenteringTemp>
+          <div style={{ textAlign: 'center' }}>
             <Title>{name}</Title>
-          </CenteringTemp>
+          </div>
           <ExampleList>
             {exampleCodes.map((exCode, i) => (
               <div key={i}>
@@ -107,13 +108,6 @@ const Sidebar = styled.div`
 
 const MainDiv = styled.div`
   grid-column: 2 / 3;
-`
-
-const Title = styled.div`
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: ${(p) => p.theme.primary};
 `
 
 const Selection = styled.div`

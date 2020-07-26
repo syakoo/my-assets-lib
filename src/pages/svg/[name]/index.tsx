@@ -7,6 +7,7 @@ import { Layout } from '../../../components/Templates'
 import { CodeBlock } from '../../../components/CodeBlock'
 import { Breadcrumbs, Item } from '../../../components/Breadcrumbs'
 import { CenteringTemp } from '../../../components/Templates'
+import { Title } from '../../../components/PageTitle'
 
 import dict from '../../../assets/svg.manifest'
 // ____________________________________________________________________________
@@ -33,7 +34,7 @@ const SvgDetail: NextPage<SvgDetail> = ({ svgName, dataStr }) => {
                 <Item to="/svg">SVG</Item>
                 <Item to={`/svg/${item.name}`}>{item.name}</Item>
               </Breadcrumbs>
-              <Title>{item.name}</Title>
+              <Title style={{ textAlign: 'center' }}>{item.name}</Title>
             </CenteringTemp>
             <StyledBox>
               <StyledSvgBlock>{item.data}</StyledSvgBlock>
@@ -67,12 +68,6 @@ export const getStaticProps: GetStaticProps<SvgDetail> = async ({ params }) => {
 }
 // ____________________________________________________________________________
 //
-const Title = styled.div`
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: ${(p) => p.theme.primary};
-`
 
 const StyledSvgBlock = styled.div`
   background-color: ${(p) => p.theme.white};
