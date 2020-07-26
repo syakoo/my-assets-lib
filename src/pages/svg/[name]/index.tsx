@@ -77,8 +77,9 @@ const StyledSvgBlock = styled.div`
 const StyledBox = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   & > div {
-    min-width: 500px;
+    width: 500px;
     margin: 0.5rem;
   }
 `

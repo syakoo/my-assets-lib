@@ -32,6 +32,6 @@ export const Layout: React.FC = ({ children }) => (
 // ____________________________________________________________________________
 //
 export const CenteringTemp = styled.div`
-  width: 600px;
+  max-width: 600px;
   margin: auto;
 `
