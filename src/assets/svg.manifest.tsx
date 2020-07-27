@@ -6,6 +6,8 @@ import SyakooLab from './svg/syakoo-lab.svg'
 import MyAssetsLib from './svg/my-assets-lib.svg'
 import Arrows from './svg/arrows.svg'
 import Triangle from './svg/triangle.svg'
+import Search from './svg/search.svg'
+import Check from './svg/check.svg'
 // ____________________________________________________________________________
 //
 type SVGItem = {
@@ -18,6 +20,8 @@ type SVGDictionaries = SVGItem[]
 //
 
 export default [
+  { name: 'check', fileName: 'check.svg', data: <Check /> },
+  { name: 'search', fileName: 'search.svg', data: <Search /> },
   { name: 'triangle', fileName: 'triangle.svg', data: <Triangle /> },
   { name: 'arrows', fileName: 'arrows.svg', data: <Arrows /> },
   { name: 'divide', fileName: 'divide.svg', data: <Divide /> },
